@@ -2,7 +2,7 @@
 pragma solidity ^0.8.0;
 
 import "./CampaignFactory.sol";
-import "./utils/Ownable.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
 
 /**
  * @title Crowdfunding Platform Contract
