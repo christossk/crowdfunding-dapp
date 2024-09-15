@@ -102,7 +102,7 @@ Installation
     
     Copy code
     
-    `git clone https://github.com/your-username/crowdfunding-dapp.git cd crowdfunding-dapp`
+    `git clone https://github.com/christossk/crowdfunding-dapp.git cd crowdfunding-dapp`
     
 2.  **Install Dependencies**
     
@@ -345,7 +345,7 @@ Contributions are welcome! Please follow these steps:
     
     Copy code
     
-    `git clone https://github.com/your-username/crowdfunding-dapp.git cd crowdfunding-dapp`
+    `git clone https://github.com/christossk/crowdfunding-dapp.git cd crowdfunding-dapp`
     
 3.  **Create a Branch**
     
@@ -404,13 +404,9 @@ Contact
 
 For any inquiries or support, please contact:
 
-*   **Email**: your-email@example.com
-*   **GitHub**: [your-username](https://github.com/your-username)
-*   **LinkedIn**: [Your Name](https://linkedin.com/in/your-profile)
-
-* * *
-
-**Note:** Replace placeholders like `your-username`, `your-email@example.com`, and image URLs with your actual information.
+*   **Email**: chris.skatharoudis@gmail.com
+*   **GitHub**: [christossk](https://github.com/christossk)
+*   **LinkedIn**: [Christos Skatharoudis](https://linkedin.com/in/cskatharoudis)
 
 * * *
 
