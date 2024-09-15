@@ -62,13 +62,28 @@ Technology Stack
 
 Project Structure
 -----------------
-
-bash
-
-Copy code
-
-`crowdfunding-dapp/ ├── contracts/ │   ├── Campaign.sol │   ├── CampaignFactory.sol │   ├── Crowdfunding.sol │   ├── interfaces/ │   │   └── ICampaign.sol │   └── utils/ │       └── Ownable.sol ├── migrations/ │   └── 1_deploy_contracts.js ├── test/ │   ├── Campaign.test.js │   └── Crowdfunding.test.js ├── truffle-config.js ├── package.json ├── .env └── README.md`
-
+```plaintext
+crowdfunding-dapp/
+├── contracts/
+│   ├── Campaign.sol
+│   ├── CampaignFactory.sol
+│   ├── Crowdfunding.sol
+│   ├── interfaces/
+│   │   └── ICampaign.sol
+│   └── utils/
+│       └── Ownable.sol
+├── migrations/
+│   └── 1_deploy_contracts.js
+├── test/
+│   ├── Campaign.test.js
+│   └── Crowdfunding.test.js
+├── scripts/
+│   └── deploy.js
+├── truffle-config.js
+├── package.json
+├── .env
+└── README.md
+```
 * * *
 
 Prerequisites
@@ -79,10 +94,6 @@ Before you begin, ensure you have met the following requirements:
 *   **Node.js** and **npm** installed.
     
 *   **Truffle** installed globally:
-    
-    bash
-    
-    Copy code
     
     `npm install -g truffle`
     
@@ -98,17 +109,9 @@ Installation
 
 1.  **Clone the Repository**
     
-    bash
-    
-    Copy code
-    
     `git clone https://github.com/christossk/crowdfunding-dapp.git cd crowdfunding-dapp`
     
 2.  **Install Dependencies**
-    
-    bash
-    
-    Copy code
     
     `npm install`
     
@@ -119,10 +122,6 @@ Compilation
 -----------
 
 Compile the smart contracts using Truffle:
-
-bash
-
-Copy code
 
 `truffle compile`
 
@@ -139,10 +138,6 @@ Deployment
     
 2.  **Deploy Contracts**
     
-    bash
-    
-    Copy code
-    
     `truffle migrate --network development`
     
 
@@ -158,10 +153,6 @@ To deploy to networks like Ropsten or Rinkeby, follow these steps:
     
     Create a `.env` file in the project root:
     
-    dotenv
-    
-    Copy code
-    
     `PRIVATE_KEY=your_private_key_without_0x_prefix INFURA_PROJECT_ID=your_infura_project_id`
     
     **Important:** Do not commit `.env` to version control. Add it to `.gitignore`.
@@ -172,10 +163,6 @@ To deploy to networks like Ropsten or Rinkeby, follow these steps:
     
 4.  **Deploy to Testnet**
     
-    bash
-    
-    Copy code
-    
     `truffle migrate --network ropsten`
     
 
@@ -185,10 +172,6 @@ Testing
 -------
 
 Run the test suites to ensure all contracts behave as expected:
-
-bash
-
-Copy code
 
 `truffle test`
 
@@ -203,36 +186,20 @@ After deploying the contracts, you can interact with them using Truffle Console 
 
 #### Using Truffle Console
 
-bash
-
-Copy code
-
 `truffle console --network development`
 
 **Example Commands:**
 
 *   **Create a Campaign**
-    
-    javascript
-    
-    Copy code
-    
+
     `let factory = await CampaignFactory.deployed(); await factory.createCampaign("My Campaign", "Support my project", web3.utils.toWei("10", "ether"), 604800, { from: "0xYourAccountAddress" });`
     
 *   **Get All Campaigns**
-    
-    javascript
-    
-    Copy code
-    
+
     `let campaigns = await factory.getAllCampaigns();`
     
 *   **Interact with a Campaign**
-    
-    javascript
-    
-    Copy code
-    
+
     `let campaignAddress = campaigns[0]; let campaign = await Campaign.at(campaignAddress); await campaign.contribute({ from: "0xContributorAddress", value: web3.utils.toWei("1", "ether") });`
     
 
@@ -301,11 +268,7 @@ Deployment to Public Networks
     
     *   Ensure the `mainnet` configuration is correct and includes gas price adjustments as needed.
 3.  **Deploy**
-    
-    bash
-    
-    Copy code
-    
+
     `truffle migrate --network mainnet`
     
 
@@ -340,19 +303,11 @@ Contributions are welcome! Please follow these steps:
     Click the "Fork" button at the top right of the repository page.
     
 2.  **Clone Your Fork**
-    
-    bash
-    
-    Copy code
-    
+
     `git clone https://github.com/christossk/crowdfunding-dapp.git cd crowdfunding-dapp`
     
 3.  **Create a Branch**
-    
-    bash
-    
-    Copy code
-    
+ 
     `git checkout -b feature/your-feature-name`
     
 4.  **Make Changes**
@@ -360,19 +315,11 @@ Contributions are welcome! Please follow these steps:
     Implement your feature or fix.
     
 5.  **Commit Changes**
-    
-    bash
-    
-    Copy code
-    
+
     `git commit -m "Add your commit message"`
     
 6.  **Push to Your Fork**
-    
-    bash
-    
-    Copy code
-    
+
     `git push origin feature/your-feature-name`
     
 7.  **Create a Pull Request**
