@@ -2,7 +2,7 @@
 pragma solidity ^0.8.0;
 
 import "./Campaign.sol";
-import "./utils/Ownable.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
 
 /**
  * @title Campaign Factory Contract
